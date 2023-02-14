@@ -1,0 +1,65 @@
+html{border:1px dashed blue; width:98%;height:98%;}
+body{border:1px dashed black;width:98%;height:98%;
+display:grid;place-items:center;}
+
+.perspectiva{border:1px dotted brown; width:30em;height:30em;
+display:grid;place-items:center;
+perspective:90em;
+perspective-origin:50em -30em;}
+.libro{position:relative;display:grid;place-items:center;
+border:1px solid orange; width:10em;height:10em;
+transform-style:preserve-3d;
+transform:rotateX(90deg);}
+.lado{position:absolute; border:2px solid yellow;}
+
+.uno{width:0em;height:17em;left:-3em;}
+.dos{width:3em;height:17em;}
+.tres{width:16em;height:3em;}
+
+.uno{transform:translateZ(1.5em);transform-style:preserve-3d;}
+.dos{transform:rotateY(90deg)translateZ(8em);}
+.tres{transform:rotateX(-90deg)translateZ(8.5em);}
+
+.pagina{position:absolute;border:1px solid green;width:4em;height:100%;
+display:block;transform-style:preserve-3d;
+}
+.puno{top:0em;left:0em;}
+.pdos{width:0%;}
+.pdos{top:0em;left:4em;}
+.ptres{top:0em;left:0em;}
+.pcuatro{width:0em;}
+.pcuatro{top:0em;left:4em;}
+.pcinco{top:0em;left:0em;}
+.pseis{width:0em;}
+.pseis{top:0em;left:4em;}
+.psiete{top:0em;left:0em;}
+
+.uno {animation:animacion 10s infinite;}
+.pdos{animation:animaciona 10s infinite;}
+.pcuatro{animation:animacionb 10s infinite;}
+.pseis{animation:animacionc 10s infinite;}
+
+@keyframes animacion{
+  0%{transform:translateZ(1.5em)rotateY(0deg);}
+ 50%{transform:translateZ(1.5em)rotateY(-170deg);}
+/*100%{}*/
+}
+@keyframes animaciona{
+  0%{transform:rotateY(0deg);}
+ 20%{transform:rotateY(40deg);}
+ 50%{transform:rotateY(-40deg);}
+ 60%{transform:rotateY(-50deg);}
+}
+@keyframes animacionb{
+  0%{transform:rotateY(0deg);}
+ 30%{transform:rotateY(30deg);}
+ 50%{transform:rotateY(20deg);}
+ 70%{transform:rotateY(-40deg);}
+}
+
+@keyframes animacionc{
+  0%{transform:rotateY(0deg);}
+ 40%{transform:rotateY(30deg);}
+ 50%{transform:rotateY(10deg);}
+ 80%{transform:rotateY(-20deg);}
+}
